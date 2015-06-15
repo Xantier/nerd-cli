@@ -6,6 +6,10 @@
   "scripts": {
     "test": "gulp test"
   },
+  "preferGlobal": true,
+  "bin": {
+    "nerd": "./bin/nerd.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Xantier/nerd-cli.git"
@@ -15,7 +19,7 @@
     "nerd-stack",
     "nerd-cli"
   ],
-  "author": "Jussi Hallila",
+  "author": "Jussi Hallila <jussi@hallila.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Xantier/nerd-cli/issues"
