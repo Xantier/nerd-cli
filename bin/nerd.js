@@ -17,7 +17,7 @@ prompt.get([{
   required: true
 }], function (err, result) {
   console.log('Command-line input received:');
-  console.log('  username: ' + result.project);
+  console.log('Project name: ' + result.project);
   mkdirp(process.cwd() + '/' + result.project, function (err) {
     if(err) console.log(err);
     ghDl({user: 'xantier', repo: 'nerd-stack', ref: 'master'}, process.cwd() + '/' + result.project)
