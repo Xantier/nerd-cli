@@ -29,6 +29,7 @@
     "github-download": "^0.3.0",
     "init-package-json": "^1.6.0",
     "mkdirp": "^0.5.1",
-    "prompt": "^0.2.14"
+    "prompt": "^0.2.14",
+    "terminal-menu": "^2.1.1"
   }
 }

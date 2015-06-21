@@ -10,14 +10,23 @@ var initFile = path.resolve(process.env.HOME, '.npm-init');
 
 prompt.start();
 
-prompt.get([{
+var promptSchema = [{
   name: 'project',
   description: 'Name of your Application',
   default: 'nerd-stack',
   required: true
-}], function (err, result) {
-  console.log('Command-line input received:');
+},
+  {
+    name: 'database',
+    description: 'What database do you want to use?',
+    default: 'rethinkDB',
+    required: true
+  }
+];
+prompt.get(promptSchema, function (err, result) {
   console.log('Project name: ' + result.project);
+  console.log('Database name: ' + result.database);
+  console.log('Let\'s initialize your package.json');
   mkdirp(process.cwd() + '/' + result.project, function (err) {
     if(err) console.log(err);
     ghDl({user: 'xantier', repo: 'nerd-stack', ref: 'master'}, process.cwd() + '/' + result.project)
